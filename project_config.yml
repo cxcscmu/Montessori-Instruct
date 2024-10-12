@@ -1,10 +1,10 @@
-project_name: quick_start
-teacher_model_name_or_path: /home/lixiaochuan/montessori/data/hf_cache/Llama3-8B-Instruct/
+project_name: your_project_name # change to your project name
+teacher_model_name_or_path: meta-llama/Meta-Llama-3-8B-Instruct
 student_model_name_or_path: TinyLlama/TinyLlama_v1.1
-fsdp_or_ddp: ./configs/ddp.yml
+fsdp_or_ddp: ./configs/ddp.yml # call 'accelerate config --config_file ./configs/ddp.yml' to generate the config file
 
-training_dataset_num: 50
-probing_dataset_num: 25
-warmup_dataset_num: 200
+training_dataset_num: 100
+probing_dataset_num: 20
+warmup_dataset_num: 100
 
 num_gpus: 8

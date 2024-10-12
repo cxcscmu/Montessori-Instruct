@@ -70,7 +70,7 @@ Here we provide a quick start to go through the whole data synthesis pipeline.
 
 Step 1: Setup your project config in `project_config.yml`. 
 ```yaml
-project_name: quick_start # your project name
+project_name: your_project_name # your project name
 teacher_model_name_or_path: meta-llama/Meta-Llama-3-8B-Instruct # the path of the teacher model
 student_model_name_or_path: TinyLlama/TinyLlama_v1.1 # the path of the student model
 fsdp_or_ddp: ./configs/ddp.yml # the path of the accelerate config file
@@ -86,7 +86,7 @@ Step 2: Run the following command:
 ```bash
 python gen_configs.py
 ```
-to generate all the config files under `configs/quick_start`, including the training scripts under the `scripts/quick_start` folder. 
+to generate all the config files under `configs/your_project_name`, including the training scripts under the `scripts/your_project_name` folder. 
 
 Step 3: Start your quick project by running:
 ```bash
