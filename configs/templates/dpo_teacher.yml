@@ -1,0 +1,43 @@
+# named for wandb settings
+task_type: dpo-teacher
+
+# the raw teacher model path;
+model_name_or_path: 
+tokenizer_max_length: 1024
+max_prompt_length: 128
+# obtained from `collect_local_data_influence` step; 
+score_dataset_path: 
+# we use the score_dataset to create the preference dataset for DPO training
+dpo_dataset_path:
+train_test_split: 0.01
+
+# the path to save the DPO updated teahcer model
+output_dir: 
+# parameters for DPO training
+training:
+  num_train_epochs: 1
+  gradient_accumulation_steps: 1
+  eval_strategy: "steps"
+  eval_steps: 400
+  save_strategy: "no"
+  save_steps: 400
+  logging_strategy: "steps"
+  logging_steps: 4
+  load_best_model_at_end: False
+  save_total_limit: 1
+  batch_size: 2
+  per_device_train_batch_size: 2
+  per_device_eval_batch_size: 2
+  beta: 0.1
+
+  optimizer:
+    learning_rate: 1e-6
+    weight_decay: 0.0
+  scheduler:
+    type: "warmup_stable_decay"
+    warmup_ratio: 0.1
+    stable_ratio: 0.5
+    decay_ratio: 0.4
+    min_lr_ratio: 0.001
+
+num_gpus: 

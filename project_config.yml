@@ -1,0 +1,10 @@
+project_name: quick_start
+teacher_model_name_or_path: /home/lixiaochuan/montessori/data/hf_cache/Llama3-8B-Instruct/
+student_model_name_or_path: TinyLlama/TinyLlama_v1.1
+fsdp_or_ddp: ./configs/ddp.yml
+
+training_dataset_num: 50
+probing_dataset_num: 25
+warmup_dataset_num: 200
+
+num_gpus: 8

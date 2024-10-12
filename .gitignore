@@ -1,0 +1,9 @@
+setup.txt
+wandb/
+
+data/hf_cache/
+
+configs/ddp.yml
+configs/fsdp.yml
+
+eval/

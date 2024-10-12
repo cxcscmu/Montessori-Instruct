@@ -1,0 +1,58 @@
+gen_instruction:
+  # the path of the data synthesis model (teacher)
+  model_name_or_path: 
+  dtype: bfloat16
+  max_model_len: 2048
+  max_tokens: 1024
+
+  # parameters for instruction generation using vllm
+  n: 4
+  best_of: 4
+  temperature: 1
+  top_p: 0.9
+  presence_penalty: 1
+  tensor_parallel_size: 1
+  batch_size: 32
+
+  # the default seed dataset used in Montessori-Instruct; you can also specify your own seed dataset
+  seed_data_path: vicgalle/alpaca-gpt4
+  split: train
+  # n-shots in prompt
+  seed_data_num: 8
+  # the number of instructions to be generated
+  num_ins:
+
+  # the path to save the generated instructions as jsonl format
+  # If there is an interruption in the production process, the program can read the data that has already been generated from jsonl to avoid starting over.
+  jsonl_save_path: 
+  # the path to save the generated instructions as huggingface Dataset format
+  generated_instructions_save_path: 
+
+gen_responses:
+  # the path of the data synthesis model (teacher)
+  model_name_or_path: 
+  dtype: bfloat16
+  max_model_len: 2048
+  max_tokens: 1024
+
+  # parameters for response generation using vllm
+  n: 1
+  best_of: 1
+  temperature: 0.6
+  top_p: 0.9
+  presence_penalty: 1
+  tensor_parallel_size: 1
+  batch_size: 32
+
+  # the path of the generated instructions (huggingface Dataset format)
+  instruction_dataset_path: 
+  # the number of instructions used to generate responses; should be less than or equal to the number of generated instructions
+  num_ins: 
+  # the path to save the generated responses as jsonl format
+  jsonl_save_path: 
+  # the path to save the generated responses as huggingface Dataset format
+  generated_responses_save_path: 
+
+  # use multi gpu to accelerate the process of generating responses
+  num_gpus: 
+  swap_space: 15

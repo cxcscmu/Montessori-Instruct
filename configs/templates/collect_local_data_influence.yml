@@ -1,0 +1,16 @@
+# The student model without warmup; i.e. a repo name on huggingface (TinyLlama/TinyLlama_v1.1)
+model_name_or_path: 
+# The warmup student model checkpoint path
+warm_up_path:  
+train_args:
+  # probing dataset path; we only calculate the local data influence on this dataset
+  data_path: 
+  num_gpus: 
+eval_args:
+  # the default reference dataset path used in Montessori-Instruct; you can also specify your own reference dataset path
+  eval_dataset_path: ./data/reference_dataset/alpaca_eval_gpt4_1106_preview
+  # the number of samples in the reference dataset
+  eval_nums: 256
+  batch_size: 8
+# after collecting the local data influence, we save them as a new column in the probing dataset and rename it as score_dataset; this is the path to save the score_dataset
+scores_dataset_path: 

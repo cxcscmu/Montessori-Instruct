@@ -1,0 +1,45 @@
+# the wandb project name
+task_type: "sft-student"
+
+model:
+  # the path of the model to be fine-tuned
+  name: 
+  # the path to save the fine-tuned model
+  output_dir: 
+
+data:
+  # the path of the dataset for fine-tuning
+  name:
+  train_test_split: 0.05
+  seed: 42
+  max_length: 1024
+
+# training parameters
+training:
+  num_epochs: 1
+  batch_size: 1
+  per_device_train_batch_size: 2
+  per_device_eval_batch_size: 2
+  gradient_accumulation_steps: 2
+
+  eval_strategy: "steps"
+  eval_steps: 50
+  save_strategy: "no"
+  save_total_limit: 1
+  save_steps: 100
+  load_best_model_at_end: False
+  logging_strategy: "steps"
+  logging_steps: 4
+
+  optimizer:
+    name: "AdamW"
+    learning_rate: 5.0e-6
+    weight_decay: 0.0
+  scheduler:
+    type: "warmup_stable_decay"
+    warmup_ratio: 0.1
+    stable_ratio: 0.5
+    decay_ratio: 0.4
+    min_lr_ratio: 0.0001
+
+num_gpus:
