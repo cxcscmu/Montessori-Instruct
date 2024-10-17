@@ -101,7 +101,7 @@ You can find the synthetic data under the `./data/your_project_name` folder and 
 # :gear: Step by Step Control
 
 ### Step 1: Generate Warmup and Probing Dataset
-We require two datasets: one for warming up the student (warmup dataset) and another for collecting local data influence (probing dataset). The `gen_warmup_and_probing_dataset.yml` file contains the parameters for this step. 
+We require two datasets: one for warming up the student (warmup dataset) and another for collecting local data influence (probing dataset). The `gen_warmup_and_probing_dataset.yml` file contains the parameters for this step. You need to create `gen_warmup_and_probing_dataset.yml` first, and you can look at the template config file under configs/templates.
 Then run the following command to generate the datasets:
 ```bash
 # Generate the instructions first
