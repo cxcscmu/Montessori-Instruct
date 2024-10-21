@@ -7,7 +7,7 @@ This is the official repository for [Montessori-Instruct: Generate Influential T
 
 Updates:
 
-:tada: [**2024-10-11**] We release the paper, codes, and synthetic datasets related to Montessori-Instruct.
+:tada: [**2024-10-18**] We release the paper, codes, and synthetic datasets related to Montessori-Instruct.
 
 <details open>
   <summary><b>🔗 Table of Contents</b></summary>
