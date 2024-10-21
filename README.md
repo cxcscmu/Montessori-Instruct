@@ -1,5 +1,5 @@
 # Montessori-Instruct: Generate Influential Training Data Tailored for Student Learning
-This is the official repository for Montessori-Instruct: Generate Influential Training Data Tailored for Student Learning. In this work, we propose a novel data synthesis framework that tailors the data synthesis ability of the teacher toward the student’s learning process.
+This is the official repository for [Montessori-Instruct: Generate Influential Training Data Tailored for Student Learning](https://arxiv.org/abs/2410.14208). In this work, we propose a novel data synthesis framework that tailors the data synthesis ability of the teacher toward the student’s learning process.
 
 ![Pipeline](assets/montessori.png)
 
@@ -162,5 +162,13 @@ If you have any questions regarding the code or the paper, feel free to contact 
 # Citation
 Please cite our paper if you use Montessori-Instruct in your work:
 ```bibtex
-TBD
+@misc{li2024montessoriinstructgenerateinfluentialtraining,
+      title={Montessori-Instruct: Generate Influential Training Data Tailored for Student Learning}, 
+      author={Xiaochuan Li and Zichun Yu and Chenyan Xiong},
+      year={2024},
+      eprint={2410.14208},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2410.14208}, 
+}
 ```
