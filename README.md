@@ -1,4 +1,4 @@
-# Montessori-Instruct: Generate Influential Training Data Tailored for Student Learning
+# [ICLR 2025] Montessori-Instruct: Generate Influential Training Data Tailored for Student Learning
 This is the official repository for [Montessori-Instruct: Generate Influential Training Data Tailored for Student Learning](https://arxiv.org/abs/2410.14208). In this work, we propose a novel data synthesis framework that tailors the data synthesis ability of the teacher toward the student’s learning process.
 
 ![Pipeline](assets/montessori.png)
